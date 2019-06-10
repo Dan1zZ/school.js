@@ -1,0 +1,21 @@
+@import url(reset.css);
+
+@keyframes shortBio {
+	from {
+	outline: 6px dashed yellow;
+	box-shadow: 0 0 0 10px red;
+	}
+	to {
+	outline: 6px dashed red;
+	box-shadow: 0 0 0 10px yellow;
+	}
+}
+
+.page {
+	height: 100%;
+	position: relative;
+}
+
+.animated {
+	animation: 1s shortBio infinite alternate;
+}
