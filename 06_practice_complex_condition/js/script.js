@@ -4,13 +4,16 @@ const rock = 0;
 const scissors = 1;
 const paper = 2;
 
-let player = parseInt(prompt('Your choice: 0 - rock, 1 - scissors, 2 - paper'));
-let computer = Math.floor(Math.random() * 3);
+let player = prompt('Your choice: 0 - rock, 1 - scissors, 2 - paper');
+let computer = Math.floor(Math.random()*2);
 
-if(player>computer) {
-	console.log('player win')
-} else (player<computer) {
-	console.log('computer win')
-} else {
-	console.log('i dont undestand u, dude')
+console.log(player);
+console.log(computer);
+
+ if(((player=rock)&&(computer=scissors))||((player=scissors)&&(computer=paper))||((player=paper)&&(computer=rock))) {
+	console.log('you wins');
+} else if(((player=rock)&&(computer=paper))||((player=scissors)&&(computer=rock))||((player=paper)&&(computer=scissors))) {
+	console.log('you lose');
+} else if(player=computer) {
+	console.log('draw')
 }
